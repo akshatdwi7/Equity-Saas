@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Equity Engage</h2>
+                <button id="toggleSidebar">☰</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="sub.html">Equity ✚</a></li>
+                                    </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <header>
+                <div class="top-nav">
+                    <ul>
+                        <li>
+                            <input type="search" id="searchInput" placeholder="Search...">
+                        </li>
+                        <li>
+                            <a href="#" id="notificationIcon">
+                                <img src="notification-icon.png" alt="Notifications">
+                            </a>
+                            <div id="notificationDropdown" class="dropdown-content">
+                                <p>No new notifications</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" id="profileIcon">
+                                <img src="profile-icon.png" alt="Profile">
+                            </a>
+                            <div id="profileDropdown" class="dropdown-content">
+                                <p>View Profile</p>
+                                <p>Logout</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            
+            <section class="discussion-topics">
+                <h1>Discussion Topics</h1>
+                <div class="topics-grid" id="topicsGrid">
+                    <div class="topic-card" data-topic="Tech Stocks">
+                        <img src="tech-stocks.jpg" alt="Tech Stocks">
+                        <h3>Tech Stocks</h3>
+                        <p>Likes: 120 | Comments: 45</p>
+                    </div>
+                    <div class="topic-card" data-topic="Crypto Market">
+                        <img src="crypto-market.jpg" alt="Crypto Market">
+                        <h3>Crypto Market</h3>
+                        <p>Likes: 98 | Comments: 30</p>
+                    </div>
+                    <div class="topic-card" data-topic="Health Stocks">
+                        <img src="health-stocks.jpg" alt="Health Stocks">
+                        <h3>Health Stocks</h3>
+                        <p>Likes: 75 | Comments: 20</p>
+                    </div>
+                    <div class="topic-card" data-topic="Energy Sector">
+                        <img src="energy-sector.jpg" alt="Energy Sector">
+                        <h3>Energy Sector</h3>
+                        <p>Likes: 110 | Comments: 40</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="online-users">
+            <h3>Online Users</h3>
+            <ul>
+                <li><a href="#">User1</a></li>
+                <li><a href="#">User2</a></li>
+                <li><a href="#">User3</a></li>
+                <li><a href="#">User4</a></li>
+                <li><a href="#">User5</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Made with <span>♥</span> by <a href="#">Yisily</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
