@@ -1,0 +1,123 @@
+/* Hero Section */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-search {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+.hero-search-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #5c4a79;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-search-btn:hover {
+    background-color: #4b3a63;
+}
+
+/* Section Headings */
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Trending Discussions */
+.trending-discussions, .market-insights, .featured-traders, .popular-topics {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.discussion-cards, .insights-cards, .trader-profiles, .topic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.discussion-card, .insight-card, .trader-profile, .topic-tag {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 0 1 calc(33% - 40px);
+    text-align: center;
+}
+
+.trader-profile img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.discussion-card h3, .insight-card h3, .trader-profile h3, .topic-tag {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.discussion-card p, .insight-card p, .trader-profile p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.topic-tag {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #5c4a79;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.topic-tag:hover {
+    background-color: #4b3a63;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+}
