@@ -66,6 +66,7 @@ nav {
     color: #333;
 }
 
+
 /* Hero Section */
 .hero {
     background-image: url('campaign-creators-qCi_MzVODoU-unsplash.jpg');
@@ -78,6 +79,7 @@ nav {
     align-items: center;
     text-align: center;
     color: rgb(162, 101, 162);
+    
     margin-top: 100px; /* To offset fixed nav */
 }
 
