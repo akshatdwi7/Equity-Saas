@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Equity Engage</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Equity Engage Forum</h1>
+        <a href="/new" class="new-post-btn">New Post</a>
+    </header>
+
+    <section class="posts">
+        <% posts.forEach(post => { %>
+            <article>
+                <h2><a href="/post/<%= post._id %>"><%= post.title %></a></h2>
+                <p>by <%= post.author %> on <%= post.createdAt.toDateString() %></p>
+            </article>
+        <% }) %>
+    </section>
+</body>
+</html>
