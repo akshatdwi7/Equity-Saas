@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum - Equity Engage</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Forum</title>
+    <link rel="stylesheet" href="/forum/public/css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Equity Engage Forum</h1>
-        <a href="/new" class="new-post-btn">New Post</a>
+        <nav>
+            <div class="logo">
+                <h1>E&E Forum</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="#">Market</a></li>
+                <li><a href="/forum">Forum</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section class="posts">
-        <% posts.forEach(post => { %>
-            <article>
-                <h2><a href="/post/<%= post._id %>"><%= post.title %></a></h2>
-                <p>by <%= post.author %> on <%= post.createdAt.toDateString() %></p>
-            </article>
-        <% }) %>
-    </section>
+    <main>
+        <h2>Forum Posts</h2>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li>
+                    <h3><%= post.title %></h3>
+                    <p><%= post.content %></p>
+                    <p><em>by <%= post.author %></em></p>
+                </li>
+            <% }) %>
+        </ul>
+        <a href="/forum/new">Create a new post</a>
+    </main>
 </body>
 </html>
