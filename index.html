@@ -15,7 +15,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="#"> Market</a></li>
+                <li><a href="Html/market.html"> Market</a></li>
                 <li><a href="/forum"> Forum</a></li>
                 <li><a href="#">Discover</a></li>
                 <li><a href="about.html">About</a></li>
@@ -32,7 +32,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2><strong>Discuss, Discover & Invest </strong></h2>
+        <h2><strong>Discuss, Discover & Invest With The power of AI </strong></h2>
         <form class="search-form">
           <input type="text" placeholder="Search🔍" style="border-radius: 30px; border-color: plum;"  >
         </form> 
@@ -52,7 +52,29 @@
 <!-- Remove the extra closing </html> tag -->
 
 
+<div class="container">
+  <h1>Check Unusual Trading Volume</h1>
+  <form id="volume-form">
+    <input type="text" id="stock-symbol" placeholder="Enter Stock Symbol" required>
+    <button type="submit">Check Volume</button>
+  </form>
+  <div id="volume-result"></div>
+</div>
+<script>
+  document.getElementById('volume-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const symbol = document.getElementById('stock-symbol').value;
+    const response = await fetch(`/api/unusual-volume?symbol=${symbol}`);
+    const data = await response.json();
 
+    const resultDiv = document.getElementById('volume-result');
+    if (data.isUnusual) {
+      resultDiv.innerHTML = `<p>Unusual trading volume detected for ${data.symbol}: ${data.currentVolume} (average: ${data.averageVolume})</p>`;
+    } else {
+      resultDiv.innerHTML = `<p>No unusual trading volume for ${data.symbol}. Current volume: ${data.currentVolume}, average volume: ${data.averageVolume}</p>`;
+    }
+  });
+</script>
 
 
 
@@ -196,8 +218,8 @@
       <p class="text-sm text-muted-foreground">The perfect starter plan</p>
       <div class="text-3xl font-bold text-foreground my-4">₹ 0/year</div>
       <ul class="list-disc list-inside text-muted-foreground mb-4">
-        <li>0 - 15 members</li>
-        <li>Publishing 15 posts monthly</li>
+        <li>No real time trackings</li>
+        <li>No suspious Tracking </li>
         <li>0% Platform Fees</li>
         <li>Analytics</li>
       </ul>
@@ -205,10 +227,10 @@
     </div>
     <div class="bg-card p-6 rounded-lg shadow-lg border-2 border-primary transition-transform transform hover:scale-105">
       <h2 class="text-xl font-semibold text-foreground">Pro</h2>
-      <p class="text-sm text-muted-foreground">A plan for growing communities</p>
+      <p class="text-sm text-muted-foreground">A plan for growing communities And Trusted investors</p>
       <div class="text-3xl font-bold text-foreground my-4"> ₹ 299/year</div>
       <ul class="list-disc list-inside text-muted-foreground mb-4">
-        <li>Up to 100 members</li>
+        <li> Insider Trading detection </li>
         <li>Connect all platforms</li>
         <li>0% platform fees</li>
         <li>Analytics</li>
@@ -221,9 +243,10 @@
       <div class="text-3xl font-bold text-foreground my-4">₹ 599/year</div>
       <ul class="list-disc list-inside text-muted-foreground mb-4">
         <li>Everything in Pro plus:</li>
-        <li>Up to 500 members</li>
+        <li> Insider Trading detection</li>
         <li>Priority Support</li>
         <li>Bonus integrations</li>
+        <li>Inform during any pump and dump i.e data manupilation </li>
       </ul>
       <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 py-2 px-4 rounded">Get Started</button>
     </div>
